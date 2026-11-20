@@ -1,0 +1,26 @@
+FIKMAN ED​​ITS — WEBSITE UPDATE
+
+WHAT CHANGED
+- Removed the emblem/logo, FIKMAN wordmark, intro caption and skip button from the opening loader. The opening now shows only the animated circular radar and loading bar.
+- Added the floating glass FIKMAN AI business assistant.
+- Added a guided project-brief flow that submits enquiries through Netlify Forms.
+- Added a secure Netlify Function for AI answers. The OpenAI API key is kept server-side and is never placed in browser JavaScript.
+- Preserved the original website files, portfolio media, glass styling, theme toggle, social links and community signup.
+
+IMPORTANT: CONNECT THE AI BEFORE IT CAN ANSWER FREELY
+1. Deploy the extracted website folder to the existing Netlify site.
+2. In Netlify, open Site configuration (or Project configuration) > Environment variables.
+3. Add OPENAI_API_KEY with an API key created in the OpenAI API platform. Do not put the key in index.html or script.js and do not share it in chat.
+4. Optionally add OPENAI_MODEL with a model available to your API account. The default in the function is gpt-6.2-sol.
+5. Trigger a fresh deploy after adding the environment variable.
+6. Test FIKMAN AI on the live website. The AI uses the OpenAI API and may incur API usage charges; ChatGPT subscriptions and API billing are separate.
+
+PROJECT ENQUIRIES
+- The “Start a project brief” flow submits to a Netlify Form named fikman-project-enquiry.
+- After deployment, check Netlify > Forms to confirm submissions are being captured.
+- To receive email alerts, configure a form submission notification for fikman-project-enquiry to nabwanacyrus@gmail.com in Netlify's form notification settings. Submit a test enquiry to verify it.
+- Until the API key is configured, the assistant displays a clear fallback message; the guided project brief and WhatsApp handoff remain available.
+
+DEPLOYMENT
+- Extract the ZIP and upload the folder contents so index.html is at the published site root.
+- Keep netlify.toml and the netlify/functions folder in the same project root as index.html.
